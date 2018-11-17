@@ -1,0 +1,3 @@
+connect_homepage:
+    path:     /
+    defaults: { _controller: ConnectBundle:Default:index }
