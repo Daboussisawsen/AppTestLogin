@@ -80,3 +80,11 @@ fos_user:
     from_email:
         address: "daboussi.sw@gmail.com"
         sender_name: "Daboussi sw"
+    registration:
+        form:
+            type: ConnectBundle\Form\RegistrationFormType
+    profile:
+        form:
+            type: ConnectBundle\Form\ProfileFormType
+    
+    

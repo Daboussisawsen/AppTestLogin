@@ -33,3 +33,12 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    connect.form.registration:
+        class: ConnectBundle\Form\RegistrationFormType
+        tags:
+            - { name: form.type, alias: app_user_registration }
+            
+    connect.form.profile:
+        class: ConnectBundle\Form\ProfilFormType
+        tags:
+            - { name: form.type, alias: app_user_registration }

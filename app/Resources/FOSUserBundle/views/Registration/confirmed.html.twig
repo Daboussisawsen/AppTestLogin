@@ -1,0 +1,12 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+    <p>Inscription effectué avec succes.
+        <br>
+        Merci de consulter votre profil pour terminer le reste des informations</p>
+    {% if targetUrl %}
+    <p><a href="{{ targetUrl }}">{{ 'Profil'|trans }}</a></p>
+    {% endif %}
+{% endblock fos_user_content %}

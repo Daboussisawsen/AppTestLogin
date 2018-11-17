@@ -1,0 +1,27 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+   
+    <h2 class="text-primary" style="text-align: center;">
+        {{ 'Bonjour'}} {{ user.username }}
+    </h2>
+       
+    <p><span class="text-primary">{{ 'Email'|trans }}:</span> {{ user.email }}</p>
+    <p><span class="text-primary">{{ 'Adresse'|trans }}:</span> {{ user.adresse }}</p>
+    <p><span class="text-primary">{{ 'Date de naissance'|trans }}:</span>
+        {% if user.birthday %}
+            {{ user.birthday|date('d-m-Y')  }}
+        {% endif %}
+    </p>
+    <p><span class="text-primary">{{ 'Date d’entree dans l’entreprise'|trans }}: </span>
+        {% if user.dateentree %}
+            {{ user.dateentree|date('d-m-Y') }}
+        {% endif %}
+    </p>
+    <br>
+    <button class="btn btn-info float-right" style="text-align: right;">
+        <a class="ml-md-auto" style="    color: #fff;" href="{{ path('fos_user_profile_edit') }}">
+        Mettre à jour 
+        </a>
+    </button>
+</div>
