@@ -42,3 +42,7 @@ services:
         class: ConnectBundle\Form\ProfilFormType
         tags:
             - { name: form.type, alias: connect_user_registration }
+    connect.form.logout:
+        class: ConnectBundle\Form\LogoutFormType
+        tags:
+            - { name: form.type, alias: connect_user_logout }
